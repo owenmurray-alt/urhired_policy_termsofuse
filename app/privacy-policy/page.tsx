@@ -25,21 +25,18 @@ export default function PrivacyPolicyPage() {
       <p>
         Tessa is built and run by <strong>URHired Limited</strong>, a company registered in Ireland
         under number <strong>722170</strong>, with its registered office at{' '}
-        <Placeholder>[registered address — fill in]</Placeholder>.
+        6 Fern Road, Sandyford, Dublin, D18 FP98, Ireland.
       </p>
       <p>We are the data controller for the information described here.</p>
       <ul>
         <li>
-          General contact: <Placeholder>[support@urhired.ie — confirm this address exists]</Placeholder>
+          General contact: <a href="mailto:support@urhired.ie">support@urhired.ie</a>
         </li>
         <li>
           Privacy and data protection requests:{' '}
-          <Placeholder>[privacy@urhired.ie — confirm this address exists]</Placeholder>
+          <a href="mailto:privacy@urhired.ie">privacy@urhired.ie</a>
         </li>
-        <li>
-          Data protection representative:{' '}
-          <Placeholder>[name, or &quot;not required, see section 19&quot;]</Placeholder>
-        </li>
+        <li>Phone: +353 83 804 6428</li>
       </ul>
 
       <hr />
@@ -216,7 +213,7 @@ export default function PrivacyPolicyPage() {
         </li>
         <li>
           Server logs holding request paths, response codes, timestamps and error details, kept for{' '}
-          <Placeholder>[log retention, suggested 30 days]</Placeholder>.
+          30 days.
         </li>
         <li>
           A record of every time a staff member opens account data that includes health answers.
@@ -351,7 +348,7 @@ export default function PrivacyPolicyPage() {
       </ul>
       <p>
         You can ask a person to look at any score you think is unfair by writing to{' '}
-        <Placeholder>[privacy@urhired.ie]</Placeholder>.
+        <a href="mailto:privacy@urhired.ie">privacy@urhired.ie</a>.
       </p>
 
       <hr />
@@ -393,13 +390,9 @@ export default function PrivacyPolicyPage() {
               <td>US</td>
             </tr>
             <tr>
-              <td>
-                <Placeholder>[Hosting provider — fill in]</Placeholder>
-              </td>
+              <td>Vercel</td>
               <td>Our server and database</td>
-              <td>
-                <Placeholder>[region]</Placeholder>
-              </td>
+              <td>Ireland</td>
             </tr>
             <tr>
               <td>Apple, Google</td>
@@ -438,7 +431,7 @@ export default function PrivacyPolicyPage() {
         certified, on the <strong>EU-US Data Privacy Framework</strong>. We have assessed each
         transfer and applied additional measures such as encryption in transit and the removal of
         direct identifiers before content is sent. Ask us at{' '}
-        <Placeholder>[privacy@urhired.ie]</Placeholder> for a copy of the safeguards.
+        <a href="mailto:privacy@urhired.ie">privacy@urhired.ie</a> for a copy of the safeguards.
       </p>
 
       <hr />
@@ -471,22 +464,17 @@ export default function PrivacyPolicyPage() {
             </tr>
             <tr>
               <td>Server logs</td>
-              <td>
-                <Placeholder>[30 days]</Placeholder>
-              </td>
+              <td>30 days</td>
             </tr>
             <tr>
               <td>Database backups</td>
-              <td>
-                <Placeholder>[backup retention, suggested 7 to 30 days]</Placeholder>, then
-                overwritten
-              </td>
+              <td>30 days, then overwritten</td>
             </tr>
             <tr>
               <td>Staff access audit trail</td>
               <td>
-                <Placeholder>[24 months]</Placeholder>. It holds internal IDs only, and identifies
-                nobody once your account is gone
+                24 months. It holds internal IDs only, and identifies nobody once your account is
+                gone
               </td>
             </tr>
             <tr>
@@ -539,7 +527,7 @@ export default function PrivacyPolicyPage() {
       </p>
       <p>
         You can also ask us to delete your account by writing to{' '}
-        <Placeholder>[privacy@urhired.ie]</Placeholder> from the address on the account.
+        <a href="mailto:privacy@urhired.ie">privacy@urhired.ie</a> from the address on the account.
       </p>
 
       <hr />
@@ -589,7 +577,7 @@ export default function PrivacyPolicyPage() {
         </li>
       </ul>
       <p>
-        Write to <Placeholder>[privacy@urhired.ie]</Placeholder>. We reply within one month. There
+        Write to <a href="mailto:privacy@urhired.ie">privacy@urhired.ie</a>. We reply within one month. There
         is no charge unless a request is clearly excessive.
       </p>
       <p>
@@ -609,7 +597,7 @@ export default function PrivacyPolicyPage() {
       <p>
         Tessa is for people aged <strong>16 and over</strong>. We do not knowingly collect anything
         from under-16s. If you believe a child has an account, write to{' '}
-        <Placeholder>[privacy@urhired.ie]</Placeholder> and we will delete it.
+        <a href="mailto:privacy@urhired.ie">privacy@urhired.ie</a> and we will delete it.
       </p>
 
       <hr />
@@ -647,10 +635,10 @@ export default function PrivacyPolicyPage() {
 
       <h2>17. Contact</h2>
       <p>
-        <strong>URHired Limited</strong>, <Placeholder>[registered address — fill in]</Placeholder>
+        <strong>URHired Limited</strong>, 6 Fern Road, Sandyford, Dublin, D18 FP98, Ireland
         <br />
-        Privacy: <Placeholder>[privacy@urhired.ie]</Placeholder> · Support:{' '}
-        <Placeholder>[support@urhired.ie]</Placeholder>
+        Privacy: <a href="mailto:privacy@urhired.ie">privacy@urhired.ie</a> · Support:{' '}
+        <a href="mailto:support@urhired.ie">support@urhired.ie</a>
       </p>
 
       <hr />
@@ -838,11 +826,11 @@ export default function PrivacyPolicyPage() {
             </tr>
             <tr>
               <td>
-                <Placeholder>[Hosting provider]</Placeholder>
+                Vercel
               </td>
               <td>Server and database hosting</td>
               <td>
-                <Placeholder>[region]</Placeholder>
+                Ireland
               </td>
             </tr>
           </tbody>

@@ -212,4 +212,61 @@
     color: var(--foreground);
     font-weight: 600;
   }
+  .legal-body h3 {
+    font-family: var(--font-poppins), sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+  }
+  .legal-body ol {
+    list-style: decimal;
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .legal-body hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.5rem 0;
+  }
+  .legal-body .lead {
+    font-size: 1.05rem;
+    color: var(--foreground);
+  }
+  .legal-body .table-wrap {
+    overflow-x: auto;
+    margin: 1rem 0 1.5rem;
+  }
+  .legal-body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .legal-body th,
+  .legal-body td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    color: var(--muted-foreground);
+  }
+  .legal-body th {
+    background: color-mix(in oklab, var(--foreground) 6%, transparent);
+    color: var(--foreground);
+    font-weight: 600;
+  }
+  .legal-body .placeholder {
+    background: color-mix(in oklab, var(--accent) 18%, transparent);
+    border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent);
+    border-radius: 4px;
+    padding: 0 0.35rem;
+    font-weight: 500;
+    color: var(--foreground);
+    font-size: 0.9em;
+  }
 }

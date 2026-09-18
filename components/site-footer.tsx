@@ -68,8 +68,16 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto w-full max-w-6xl px-6 py-6 text-sm text-muted-foreground">
-          URhired.ie · Company No. 722170, registered in Ireland
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>URhired.ie · Company No. 722170, registered in Ireland</span>
+          <div className="flex items-center gap-6">
+            <a href="/privacy-policy" className="transition-colors hover:text-foreground">
+              Privacy Policy
+            </a>
+            <a href="/terms-of-use" className="transition-colors hover:text-foreground">
+              Terms of Use
+            </a>
+          </div>
         </div>
       </div>
     </footer>

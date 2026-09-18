@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
+import { CookieConsent } from '@/components/cookie-consent'
 import './globals.css'
 
 const inter = Inter({
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <CookieConsent />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

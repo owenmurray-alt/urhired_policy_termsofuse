@@ -177,8 +177,9 @@ export default function PrivacyPolicyPage() {
         the voice side of the interview. It does not pass through our servers and{' '}
         <strong>we do not record or store it</strong>. ElevenLabs holds the conversation audio and
         transcript on its own systems under our account, tagged with your internal user ID and no
-        other identifier. Its retention period for that material is{' '}
-        <Placeholder>[ElevenLabs retention setting — fill in]</Placeholder>.
+        other identifier. That material is deleted within 30 days of the session. ElevenLabs may
+        retain limited data briefly for security and abuse-prevention purposes in line with its data
+        processing terms.
       </p>
       <p>
         We never use the microphone outside a session you started, and the app has no camera feature
@@ -483,9 +484,7 @@ export default function PrivacyPolicyPage() {
             </tr>
             <tr>
               <td>Conversation audio and transcripts at ElevenLabs</td>
-              <td>
-                <Placeholder>[ElevenLabs retention setting]</Placeholder>
-              </td>
+              <td>Deleted within 30 days of the session</td>
             </tr>
           </tbody>
         </table>

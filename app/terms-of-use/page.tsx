@@ -28,7 +28,7 @@ export default function TermsOfUsePage() {
         office 6 Fern Road, Sandyford, Dublin, D18 FP98, Ireland, referred to below as
         &quot;we&quot;, &quot;us&quot; and &quot;our&quot;.
       </p>
-      <p>Contact: owen.murray@URHired.ie / +353 83 804 6428</p>
+      <p>Contact: support@urhired.ie / +353 83 804 6428</p>
 
       <hr />
 
@@ -57,7 +57,7 @@ export default function TermsOfUsePage() {
         </li>
         <li>You are responsible for what happens on your account.</li>
       </ul>
-      <p>Tell us at owen.murray@URHired.ie if you think someone else is using it.</p>
+      <p>Tell us at support@urhired.ie if you think someone else is using it.</p>
 
       <hr />
 
@@ -339,7 +339,7 @@ export default function TermsOfUsePage() {
         your own country&apos;s mandatory consumer law and can bring a claim in your own courts.
       </p>
       <p>
-        Talk to us first at owen.murray@URHired.ie. Most things are sorted in an email. EU consumers
+        Talk to us first at support@urhired.ie. Most things are sorted in an email. EU consumers
         can also use the European Commission&apos;s online dispute resolution platform.
       </p>
 
@@ -415,7 +415,7 @@ export default function TermsOfUsePage() {
         </li>
         <li>
           <strong>Contact.</strong> Questions, complaints or claims about the app go to
-          owen.murray@URHired.ie.
+          support@urhired.ie.
         </li>
       </ol>
 

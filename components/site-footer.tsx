@@ -40,6 +40,9 @@ export function SiteFooter() {
             <a href="#who" className="transition-colors hover:text-foreground">
               Who we work with
             </a>
+            <a href="/contact" className="transition-colors hover:text-foreground">
+              Contact
+            </a>
             <a
               href="https://calendly.com/owen-murray-urhired/meeting-with-owen-murray-clone-1"
               target="_blank"

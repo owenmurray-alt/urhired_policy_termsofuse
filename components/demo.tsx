@@ -11,21 +11,16 @@ export function Demo() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {['/assets/tessa-clip-1.mp4', '/assets/tessa-clip-2.mp4'].map((src) => (
-          <div
-            key={src}
-            className="overflow-hidden rounded-3xl border border-border bg-card shadow-lg ring-1 ring-brand-soft/30"
-          >
-            <video
-              src={src}
-              controls
-              playsInline
-              preload="metadata"
-              className="aspect-video w-full bg-background object-cover"
-            />
-          </div>
-        ))}
+      <div className="mx-auto mt-12 max-w-4xl">
+        <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-lg ring-1 ring-brand-soft/30">
+          <video
+            src="/assets/tessa-client-demo.mp4"
+            controls
+            playsInline
+            preload="metadata"
+            className="aspect-video w-full bg-background object-cover"
+          />
+        </div>
       </div>
     </section>
   )

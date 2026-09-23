@@ -24,6 +24,10 @@ export function Hero() {
               className="h-8 w-8 object-contain"
             />
           </div>
+          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand-soft/60 px-4 py-1.5 text-xs font-700 uppercase tracking-[0.14em] text-brand">
+            <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
+            AI for good
+          </span>
           <h1 className="font-heading text-4xl font-700 leading-[1.1] tracking-tight text-foreground text-balance md:text-5xl">
             We help organisations unlock neurodivergent talent — at scale.
           </h1>
@@ -38,7 +42,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-600 text-primary-foreground shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
             >
-              Book a discovery call
+              Book a demo
             </a>
             <a
               href="#partner"

@@ -17,7 +17,7 @@ export function Cta() {
           rel="noopener noreferrer"
           className="inline-flex shrink-0 items-center justify-center rounded-full bg-background px-7 py-3.5 text-sm font-600 text-brand shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
         >
-          Book a discovery call
+          Book a demo
         </a>
       </div>
     </section>

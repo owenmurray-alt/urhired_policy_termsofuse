@@ -4,7 +4,7 @@ export function SiteNav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-4">
-        <a href="#top" className="flex items-center">
+        <a href="#top" className="flex items-center gap-3">
           <span className="inline-flex rounded-lg bg-white px-2.5 py-1.5">
             <Image
               src="/assets/urhired-wordmark.png"
@@ -14,6 +14,13 @@ export function SiteNav() {
               className="h-6 w-auto object-contain"
             />
           </span>
+          <Image
+            src="/assets/nd-symbol.png"
+            alt="Neurodiversity infinity symbol"
+            width={28}
+            height={28}
+            className="h-6 w-6 object-contain"
+          />
         </a>
 
         <div className="hidden items-center gap-8 text-sm font-500 text-muted-foreground md:flex">

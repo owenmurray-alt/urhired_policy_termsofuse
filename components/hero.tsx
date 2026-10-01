@@ -51,6 +51,18 @@ export function Hero() {
               See how the pilot works
             </a>
           </div>
+          <div className="mt-10 flex items-center gap-4 border-t border-border pt-6">
+            <span className="text-xs font-600 uppercase tracking-[0.14em] text-muted-foreground">
+              Backed by
+            </span>
+            <Image
+              src="/assets/enterprise-ireland.png"
+              alt="Enterprise Ireland"
+              width={185}
+              height={75}
+              className="h-12 w-auto rounded-md object-contain"
+            />
+          </div>
         </div>
 
         <div className="relative flex justify-center">

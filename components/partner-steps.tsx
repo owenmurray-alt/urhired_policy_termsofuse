@@ -4,7 +4,7 @@ const steps = [
   {
     num: '01',
     img: '/assets/tessa-head-2.png',
-    title: 'Free masterclass',
+    title: 'Complimentary masterclass',
     body: 'Your team or cohort joins a session on the 10 Laws of Interviewing, at no cost, so everyone sees Tessa in action first.',
   },
   {

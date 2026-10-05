@@ -4,9 +4,9 @@ export function Hero() {
   return (
     <header id="top" className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-brand-soft/40 via-background to-background" />
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-24">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 pb-12 pt-10 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:gap-12 md:py-24">
         <div>
-          <div className="mb-6 flex items-center gap-3">
+          <div className="mb-6 hidden items-center gap-3 md:flex">
             <span className="inline-flex rounded-xl bg-white px-3 py-2">
               <Image
                 src="/assets/urhired-wordmark.png"
@@ -28,25 +28,25 @@ export function Hero() {
             <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
             AI for good
           </span>
-          <h1 className="font-heading text-4xl font-700 leading-[1.1] tracking-tight text-foreground text-balance md:text-5xl">
+          <h1 className="font-heading text-[2.125rem] font-700 leading-[1.1] tracking-tight text-foreground text-balance sm:text-4xl md:text-5xl">
             We help organisations unlock neurodivergent talent — at scale.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground text-pretty sm:text-lg md:mt-6">
             Deploy Tessa, our AI interview coach, into your programme and give every single person
             real interview practice — the kind that actually changes lives.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href="https://calendly.com/owen-murray-urhired/tessa-demo-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-600 text-primary-foreground shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 py-3 text-base font-600 text-primary-foreground shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md sm:text-sm"
             >
               Book a demo
             </a>
             <a
               href="#partner"
-              className="inline-flex items-center justify-center rounded-full border border-border bg-card px-6 py-3 text-sm font-600 text-foreground transition-colors hover:border-brand hover:text-brand"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-border bg-card px-6 py-3 text-base font-600 text-foreground transition-colors hover:border-brand hover:text-brand sm:text-sm"
             >
               See how the pilot works
             </a>
@@ -81,7 +81,8 @@ export function Hero() {
             width={520}
             height={520}
             priority
-            className="w-full max-w-xs object-contain drop-shadow-2xl"
+            sizes="(min-width: 768px) 320px, 240px"
+            className="w-full max-w-[15rem] object-contain drop-shadow-2xl md:max-w-xs"
           />
         </div>
       </div>

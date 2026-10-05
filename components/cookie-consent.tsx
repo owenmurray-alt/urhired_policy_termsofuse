@@ -48,6 +48,18 @@ export function CookieConsent() {
     }
   }, [])
 
+  useEffect(() => {
+    const root = document.documentElement
+    if (visible) {
+      root.dataset.cookieBanner = 'open'
+    } else {
+      delete root.dataset.cookieBanner
+    }
+    return () => {
+      delete root.dataset.cookieBanner
+    }
+  }, [visible])
+
   function handleChoice(value: ConsentValue) {
     writeConsent(value)
     setVisible(false)
@@ -62,19 +74,25 @@ export function CookieConsent() {
       aria-labelledby="cookie-consent-title"
       className="fixed inset-x-0 bottom-0 z-[100] border-t border-border bg-secondary/95 backdrop-blur supports-[backdrop-filter]:bg-secondary/80"
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-6 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-4 sm:px-6 md:flex-row md:items-center md:justify-between md:gap-6 md:py-6">
         <div className="max-w-3xl">
           <h2
             id="cookie-consent-title"
-            className="font-heading text-lg font-600 text-foreground"
+            className="font-heading text-base font-600 text-foreground md:text-lg"
           >
             Cookies on this site
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Cookies are small text files placed on your device by websites you visit. They are
-            widely used to make sites work, or work more efficiently, as well as to provide
-            information to the site owners. If you give consent it will last for 180 days. More
-            information is available in our{' '}
+          <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground md:mt-2">
+            <span className="md:hidden">
+              We use cookies to make this site work and to understand how it&apos;s used. Consent
+              lasts 180 days. See our{' '}
+            </span>
+            <span className="hidden md:inline">
+              Cookies are small text files placed on your device by websites you visit. They are
+              widely used to make sites work, or work more efficiently, as well as to provide
+              information to the site owners. If you give consent it will last for 180 days. More
+              information is available in our{' '}
+            </span>
             <a
               href="/privacy-policy"
               className="font-500 text-foreground underline underline-offset-4 transition-colors hover:text-primary"
@@ -85,20 +103,21 @@ export function CookieConsent() {
           </p>
         </div>
 
-        <div className="flex shrink-0 flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
+        <div className="grid shrink-0 grid-cols-2 gap-3 md:flex md:flex-col lg:flex-row">
           <button
             type="button"
             onClick={() => handleChoice('all')}
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-600 text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-4 py-2.5 text-sm font-600 text-primary-foreground transition-colors hover:bg-primary/90 md:px-6 md:py-3"
           >
             Accept all
           </button>
           <button
             type="button"
             onClick={() => handleChoice('necessary')}
-            className="inline-flex items-center justify-center rounded-full border border-border bg-transparent px-6 py-3 text-sm font-600 text-foreground transition-colors hover:bg-foreground/10"
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-border bg-transparent px-4 py-2.5 text-sm font-600 text-foreground transition-colors hover:bg-foreground/10 md:px-6 md:py-3"
           >
-            Only strictly necessary
+            <span className="md:hidden">Necessary only</span>
+            <span className="hidden md:inline">Only strictly necessary</span>
           </button>
         </div>
       </div>

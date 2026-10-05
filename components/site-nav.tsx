@@ -3,7 +3,7 @@ import Image from 'next/image'
 export function SiteNav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-4">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6 md:py-4">
         <a href="#top" className="flex items-center gap-3">
           <span className="inline-flex rounded-lg bg-white px-2.5 py-1.5">
             <Image

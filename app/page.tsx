@@ -5,6 +5,7 @@ import { Impact } from '@/components/impact'
 import { PartnerSteps } from '@/components/partner-steps'
 import { Demo } from '@/components/demo'
 import { ProductTour } from '@/components/product-tour'
+import { Testimonial } from '@/components/testimonial'
 import { Packages } from '@/components/packages'
 import { Faq } from '@/components/faq'
 import { Cta } from '@/components/cta'
@@ -29,6 +30,7 @@ export default function Page() {
         <PartnerSteps />
         <Demo />
         <ProductTour />
+        <Testimonial />
         <Packages />
         <Faq />
         <Cta />

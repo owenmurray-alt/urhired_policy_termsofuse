@@ -41,7 +41,7 @@ export default function ContactPage() {
                 The fastest way to get started is a 30-minute discovery call.
               </p>
               <a
-                href="https://calendly.com/owen-murray-urhired/meeting-with-owen-murray-clone-1"
+                href="https://calendly.com/owen-murray-urhired/tessa-demo-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center justify-center rounded-full bg-brand px-5 py-2.5 text-sm font-600 text-primary-foreground shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"

@@ -37,7 +37,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="https://calendly.com/owen-murray-urhired/meeting-with-owen-murray-clone-1"
+              href="https://calendly.com/owen-murray-urhired/tessa-demo-call"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-600 text-primary-foreground shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"

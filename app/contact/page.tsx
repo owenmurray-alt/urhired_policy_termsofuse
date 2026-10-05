@@ -4,9 +4,11 @@ import { SiteFooter } from '@/components/site-footer'
 import { ContactForm } from '@/components/contact-form'
 
 export const metadata: Metadata = {
-  title: 'Contact us | ur hired',
+  title: 'Contact us',
   description:
-    'Get in touch with the ur hired team to talk about deploying Tessa, our AI interview coach, across your programme.',
+    'Get in touch with the URHired team to book a demo of Tessa, the AI interview coach for universities, colleges, employability programmes and community organisations.',
+  alternates: { canonical: '/contact' },
+  openGraph: { url: '/contact' },
 }
 
 export default function ContactPage() {

@@ -2,9 +2,11 @@ import type { Metadata } from 'next'
 import { LegalPage } from '@/components/legal-page'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Tessa by URHired',
+  title: 'Privacy Policy',
   description:
     'How URHired Limited collects, uses and protects your data when you use the Tessa app and service.',
+  alternates: { canonical: '/privacy-policy' },
+  openGraph: { url: '/privacy-policy' },
 }
 
 function Placeholder({ children }: { children: React.ReactNode }) {

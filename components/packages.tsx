@@ -79,7 +79,7 @@ export function Packages() {
       </div>
 
       <p className="mt-8 text-center text-sm text-muted-foreground">
-        Pricing is set per pilot and cohort size — details on a discovery call.
+        Pricing is set per pilot and cohort size — details on a demo call.
       </p>
     </section>
   )

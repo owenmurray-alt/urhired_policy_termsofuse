@@ -44,7 +44,7 @@ export function SiteFooter() {
               Contact
             </a>
             <a
-              href="https://calendly.com/owen-murray-urhired/meeting-with-owen-murray-clone-1"
+              href="https://calendly.com/owen-murray-urhired/tessa-demo-call"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-foreground"

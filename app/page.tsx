@@ -1,6 +1,7 @@
 import { SiteNav } from '@/components/site-nav'
 import { Hero } from '@/components/hero'
 import { Mission } from '@/components/mission'
+import { Impact } from '@/components/impact'
 import { PartnerSteps } from '@/components/partner-steps'
 import { Demo } from '@/components/demo'
 import { Packages } from '@/components/packages'
@@ -22,6 +23,7 @@ export default function Page() {
           </div>
         </div>
         <Mission />
+        <Impact />
         <PartnerSteps />
         <Demo />
         <Packages />

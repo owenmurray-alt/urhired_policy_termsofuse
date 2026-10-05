@@ -51,17 +51,25 @@ export function Hero() {
               See how the pilot works
             </a>
           </div>
-          <div className="mt-10 flex items-center gap-4 border-t border-border pt-6">
-            <span className="text-xs font-600 uppercase tracking-[0.14em] text-muted-foreground">
-              Backed by
-            </span>
-            <Image
-              src="/assets/enterprise-ireland.png"
-              alt="Enterprise Ireland"
-              width={185}
-              height={75}
-              className="h-12 w-auto rounded-md object-contain"
-            />
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-border pt-6">
+            <p className="flex items-center gap-3">
+              <span className="font-heading text-4xl font-700 leading-none text-brand">78%</span>
+              <span className="max-w-[11rem] text-sm leading-snug text-muted-foreground">
+                of our users got a job within 6 weeks
+              </span>
+            </p>
+            <div className="flex items-center gap-4">
+              <span className="text-xs font-600 uppercase tracking-[0.14em] text-muted-foreground">
+                Backed by
+              </span>
+              <Image
+                src="/assets/enterprise-ireland.png"
+                alt="Enterprise Ireland"
+                width={185}
+                height={75}
+                className="h-12 w-auto rounded-md object-contain"
+              />
+            </div>
           </div>
         </div>
 

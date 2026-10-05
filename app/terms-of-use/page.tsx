@@ -2,9 +2,11 @@ import type { Metadata } from 'next'
 import { LegalPage } from '@/components/legal-page'
 
 export const metadata: Metadata = {
-  title: 'Terms of Use — Tessa by URHired',
+  title: 'Terms of Use',
   description:
     'The agreement between you and URHired Limited for the Tessa app and service, including the App Store end user licence terms.',
+  alternates: { canonical: '/terms-of-use' },
+  openGraph: { url: '/terms-of-use' },
 }
 
 export default function TermsOfUsePage() {

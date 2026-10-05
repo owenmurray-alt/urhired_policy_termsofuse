@@ -7,7 +7,7 @@ export function Cta() {
             Ready to see Tessa in your programme?
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-primary-foreground/85 text-pretty">
-            Book a free discovery call and we&apos;ll walk through what a pilot would look like for your
+            Book a complimentary discovery call and we&apos;ll walk through what a pilot would look like for your
             cohort.
           </p>
         </div>

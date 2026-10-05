@@ -101,9 +101,9 @@ export default function TermsOfUsePage() {
 
       <hr />
 
-      <h2>5. Free and paid access</h2>
+      <h2>5. Complimentary and paid access</h2>
       <p>
-        Some of Tessa is free. Tessa Plus opens the rest, and is sold as an auto-renewing
+        Some of Tessa is complimentary. Tessa Plus opens the rest, and is sold as an auto-renewing
         subscription through the App Store or Google Play.
       </p>
       <p>
@@ -136,7 +136,7 @@ export default function TermsOfUsePage() {
         </li>
         <li>Deleting your account does not cancel the subscription. Cancel it first.</li>
         <li>
-          Free trials, where offered, convert into a paid subscription unless you cancel before the
+          Complimentary trials, where offered, convert into a paid subscription unless you cancel before the
           trial ends. Any unused part of a trial is forfeited when you buy a subscription.
         </li>
         <li>

@@ -6,6 +6,7 @@ import { PartnerSteps } from '@/components/partner-steps'
 import { Demo } from '@/components/demo'
 import { ProductTour } from '@/components/product-tour'
 import { Packages } from '@/components/packages'
+import { Faq } from '@/components/faq'
 import { Cta } from '@/components/cta'
 import { SiteFooter } from '@/components/site-footer'
 
@@ -29,6 +30,7 @@ export default function Page() {
         <Demo />
         <ProductTour />
         <Packages />
+        <Faq />
         <Cta />
       </main>
       <SiteFooter />

@@ -4,6 +4,7 @@ import { Mission } from '@/components/mission'
 import { Impact } from '@/components/impact'
 import { PartnerSteps } from '@/components/partner-steps'
 import { Demo } from '@/components/demo'
+import { ProductTour } from '@/components/product-tour'
 import { Packages } from '@/components/packages'
 import { Cta } from '@/components/cta'
 import { SiteFooter } from '@/components/site-footer'
@@ -26,6 +27,7 @@ export default function Page() {
         <Impact />
         <PartnerSteps />
         <Demo />
+        <ProductTour />
         <Packages />
         <Cta />
       </main>

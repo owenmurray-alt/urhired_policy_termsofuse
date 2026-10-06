@@ -19,6 +19,27 @@ const screens = [
     title: 'Progress they can see',
     body: 'Every session is saved, so candidates and programme staff can see confidence build over time on the way to feeling ready.',
   },
+  {
+    src: '/assets/tessa-app-cv.jpg',
+    alt: 'Tessa CV screen showing a score of 78, Excellent, checked against the job ad, with 9 things already working, 3 to fix and a list of quick wins.',
+    title: 'A CV tailored to the exact role',
+    body: 'Candidates add their CV and the job ad. Tessa reads it the way employer screening software does, scores the match and gives specific quick wins to fix.',
+  },
+]
+
+const comparison = [
+  {
+    generic: 'Rewrites a CV with buzzwords that sound like every other application.',
+    tessa: 'Checks the CV against the actual job ad and flags the exact keywords and evidence missing.',
+  },
+  {
+    generic: 'Generic interview questions with no sense of what hiring managers listen for.',
+    tessa: 'Questions and feedback shaped by what recruiters actually shortlist and reject on.',
+  },
+  {
+    generic: 'Long, dense replies that can overwhelm.',
+    tessa: 'One clear step at a time, designed neurodivergent-first.',
+  },
 ]
 
 export function ProductTour() {
@@ -39,7 +60,7 @@ export function ProductTour() {
           </p>
         </div>
 
-        <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
+        <ol className="grid gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           {screens.map((screen) => (
             <li key={screen.src} className="flex flex-col gap-5">
               <div className="overflow-hidden rounded-3xl border border-border ring-1 ring-primary/20">
@@ -48,7 +69,7 @@ export function ProductTour() {
                   alt={screen.alt}
                   width={900}
                   height={1600}
-                  sizes="(min-width: 768px) 33vw, 100vw"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                   className="h-auto w-full"
                 />
               </div>
@@ -59,6 +80,43 @@ export function ProductTour() {
             </li>
           ))}
         </ol>
+
+        <div className="flex flex-col gap-8 rounded-3xl border border-border p-6 md:p-10">
+          <div className="flex max-w-3xl flex-col gap-3">
+            <p className="text-sm font-600 uppercase tracking-widest text-primary">Not generic AI</p>
+            <h3 className="font-heading text-2xl font-700 leading-tight tracking-tight text-foreground text-balance md:text-3xl">
+              Built on 13 years of real recruitment experience.
+            </h3>
+            <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
+              General-purpose chatbots guess at what employers want. Tessa is built on more than a
+              decade of hiring, screening and placing candidates, so every CV check and practice
+              question reflects how recruiters actually decide who gets an interview.
+            </p>
+          </div>
+
+          <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
+            <div className="flex flex-col gap-4 bg-background p-6">
+              <p className="font-heading text-base font-600 text-muted-foreground">Generic AI tools</p>
+              <ul className="flex flex-col gap-4">
+                {comparison.map((row) => (
+                  <li key={row.generic} className="leading-relaxed text-muted-foreground text-pretty">
+                    {row.generic}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col gap-4 bg-background p-6">
+              <p className="font-heading text-base font-600 text-primary">Tessa</p>
+              <ul className="flex flex-col gap-4">
+                {comparison.map((row) => (
+                  <li key={row.tessa} className="leading-relaxed text-foreground text-pretty">
+                    {row.tessa}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <a
           href="https://play.google.com/store/apps/details?id=com.tessa.ai"

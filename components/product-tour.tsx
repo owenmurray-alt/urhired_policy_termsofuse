@@ -85,16 +85,23 @@ export function ProductTour() {
           </div>
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3">
-              <p className="text-sm font-600 uppercase tracking-widest text-primary">Tailor your CV</p>
+              <div className="flex flex-wrap items-center gap-3">
+                <p className="text-sm font-600 uppercase tracking-widest text-primary">Tailor your CV</p>
+                <span className="rounded-full bg-primary px-3 py-1 text-xs font-700 uppercase tracking-widest text-primary-foreground">
+                  Our USP
+                </span>
+              </div>
               <h3
                 id="cv-heading"
                 className="font-heading text-2xl font-700 leading-tight tracking-tight text-foreground text-balance md:text-3xl"
               >
-                A CV built for the exact job, not every job.
+                A CV builder built on 13 years in recruitment, not a generic AI tool.
               </h3>
               <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
-                Most CVs are rejected before a person ever reads them. Tessa shows candidates
-                exactly what a recruiter would change for this specific role.
+                Most CVs are rejected before a person ever reads them. Generic AI tools rewrite
+                CVs from guesswork. Tessa&apos;s CV builder is based on 13 years of hands-on
+                recruitment experience, so it shows candidates exactly what a recruiter would
+                change for this specific role.
               </p>
             </div>
             <ol className="flex flex-col gap-5">
@@ -113,6 +120,11 @@ export function ProductTour() {
                 </li>
               ))}
             </ol>
+            <p className="border-l-2 border-primary pl-4 leading-relaxed text-foreground text-pretty">
+              <span className="font-600">Why it&apos;s different:</span> every check and suggestion
+              reflects what recruiters actually shortlist and reject on, drawn from 13 years of
+              real hiring, not a general-purpose chatbot.
+            </p>
           </div>
         </div>
 

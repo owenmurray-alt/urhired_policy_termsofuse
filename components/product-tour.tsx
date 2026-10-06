@@ -21,6 +21,36 @@ const screens = [
   },
 ]
 
+const cvSteps = [
+  {
+    title: 'Add the CV and the job ad',
+    body: 'Candidates upload their current CV and paste in the advert for the role they actually want.',
+  },
+  {
+    title: 'Get a match score',
+    body: 'Tessa checks the CV against that job ad the way employer screening software and recruiters do, and shows what is already working.',
+  },
+  {
+    title: 'Fix the quick wins',
+    body: 'Specific, tickable fixes, such as adding numbers to show impact or naming the exact skills the ad asks for. No vague advice.',
+  },
+]
+
+const comparison = [
+  {
+    generic: 'Rewrites a CV with buzzwords that sound like every other application.',
+    tessa: 'Checks the CV against the actual job ad and flags the exact keywords and evidence missing.',
+  },
+  {
+    generic: 'Generic interview questions with no sense of what hiring managers listen for.',
+    tessa: 'Questions and feedback shaped by what recruiters actually shortlist and reject on.',
+  },
+  {
+    generic: 'Long, dense replies that can overwhelm.',
+    tessa: 'One clear step at a time, designed neurodivergent-first.',
+  },
+]
+
 export function ProductTour() {
   return (
     <section id="product" aria-labelledby="product-heading" className="bg-background">
@@ -37,6 +67,65 @@ export function ProductTour() {
             Calm, low-clutter screens with one task at a time, designed neurodivergent-first so they
             work better for everyone.
           </p>
+        </div>
+
+        <div
+          aria-labelledby="cv-heading"
+          className="flex flex-col gap-10 rounded-3xl border border-primary/40 p-6 md:flex-row md:items-center md:gap-14 md:p-10"
+        >
+          <div className="mx-auto w-full max-w-xs shrink-0 overflow-hidden rounded-3xl border border-border ring-1 ring-primary/30 md:mx-0">
+            <Image
+              src="/assets/tessa-app-cv.jpg"
+              alt="Tessa Curriculum Vitae screen showing a score of 78, Excellent, checked against the job ad, with 9 things already working, 3 to fix and a list of quick wins."
+              width={900}
+              height={1600}
+              sizes="(min-width: 768px) 320px, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-wrap items-center gap-3">
+                <p className="text-sm font-600 uppercase tracking-widest text-primary">Tailor your CV</p>
+                <span className="rounded-full bg-primary px-3 py-1 text-xs font-700 uppercase tracking-widest text-primary-foreground">
+                  Our USP
+                </span>
+              </div>
+              <h3
+                id="cv-heading"
+                className="font-heading text-2xl font-700 leading-tight tracking-tight text-foreground text-balance md:text-3xl"
+              >
+                A CV builder built on 13 years in recruitment, not a generic AI tool.
+              </h3>
+              <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
+                Most CVs are rejected before a person ever reads them. Generic AI tools rewrite
+                CVs from guesswork. Tessa&apos;s CV builder is based on 13 years of hands-on
+                recruitment experience, so it shows candidates exactly what a recruiter would
+                change for this specific role.
+              </p>
+            </div>
+            <ol className="flex flex-col gap-5">
+              {cvSteps.map((step, index) => (
+                <li key={step.title} className="flex gap-4">
+                  <span
+                    aria-hidden="true"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-sm font-700 text-primary-foreground"
+                  >
+                    {index + 1}
+                  </span>
+                  <div className="flex flex-col gap-1">
+                    <h4 className="font-heading text-base font-600 text-foreground">{step.title}</h4>
+                    <p className="leading-relaxed text-muted-foreground text-pretty">{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="border-l-2 border-primary pl-4 leading-relaxed text-foreground text-pretty">
+              <span className="font-600">Why it&apos;s different:</span> every check and suggestion
+              reflects what recruiters actually shortlist and reject on, drawn from 13 years of
+              real hiring, not a general-purpose chatbot.
+            </p>
+          </div>
         </div>
 
         <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
@@ -59,6 +148,43 @@ export function ProductTour() {
             </li>
           ))}
         </ol>
+
+        <div className="flex flex-col gap-8 rounded-3xl border border-border p-6 md:p-10">
+          <div className="flex max-w-3xl flex-col gap-3">
+            <p className="text-sm font-600 uppercase tracking-widest text-primary">Not generic AI</p>
+            <h3 className="font-heading text-2xl font-700 leading-tight tracking-tight text-foreground text-balance md:text-3xl">
+              Built on 13 years of real recruitment experience.
+            </h3>
+            <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
+              General-purpose chatbots guess at what employers want. Tessa is built on more than a
+              decade of hiring, screening and placing candidates, so every CV check and practice
+              question reflects how recruiters actually decide who gets an interview.
+            </p>
+          </div>
+
+          <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
+            <div className="flex flex-col gap-4 bg-background p-6">
+              <p className="font-heading text-base font-600 text-muted-foreground">Generic AI tools</p>
+              <ul className="flex flex-col gap-4">
+                {comparison.map((row) => (
+                  <li key={row.generic} className="leading-relaxed text-muted-foreground text-pretty">
+                    {row.generic}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col gap-4 bg-background p-6">
+              <p className="font-heading text-base font-600 text-primary">Tessa</p>
+              <ul className="flex flex-col gap-4">
+                {comparison.map((row) => (
+                  <li key={row.tessa} className="leading-relaxed text-foreground text-pretty">
+                    {row.tessa}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <a
           href="https://play.google.com/store/apps/details?id=com.tessa.ai"

@@ -25,12 +25,12 @@ export default function Page() {
             </p>
           </div>
         </div>
+        <Testimonial />
         <Mission />
         <Impact />
         <PartnerSteps />
         <Demo />
         <ProductTour />
-        <Testimonial />
         <Packages />
         <Faq />
         <Cta />

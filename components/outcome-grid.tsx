@@ -69,7 +69,7 @@ export function OutcomeGrid() {
   return (
     <div
       ref={panelRef}
-      className="mx-auto flex w-full max-w-md flex-col gap-6 rounded-3xl border border-border bg-card p-6 md:mr-0 md:p-8"
+      className="mx-auto flex w-full max-w-sm flex-col gap-6"
     >
       <div className="flex items-end gap-4">
         <p
@@ -104,21 +104,16 @@ export function OutcomeGrid() {
         ))}
       </div>
 
-      <div className="flex flex-col gap-3 border-t border-border pt-5">
-        <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground">
-          <li className="flex items-center gap-2">
-            <span aria-hidden="true" className="size-3 rounded-full bg-primary" />
-            78 got a job within 6 weeks
-          </li>
-          <li className="flex items-center gap-2">
-            <span aria-hidden="true" className="size-3 rounded-full bg-foreground/10" />
-            22 other users
-          </li>
-        </ul>
-        <p className="text-sm leading-relaxed text-muted-foreground">
-          Each dot is 1 in every 100 Tessa users. Animated illustration of our 78% result.
-        </p>
-      </div>
+      <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground">
+        <li className="flex items-center gap-2">
+          <span aria-hidden="true" className="size-3 rounded-full bg-primary" />
+          78 got a job within 6 weeks
+        </li>
+        <li className="flex items-center gap-2">
+          <span aria-hidden="true" className="size-3 rounded-full bg-foreground/10" />
+          22 other users
+        </li>
+      </ul>
     </div>
   )
 }

@@ -24,8 +24,8 @@ const DRAW_DURATION_MS = 1800
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
 
 const totals = [
-  { label: 'Jobseekers helped', value: 600, suffix: '+' },
-  { label: 'Successful interviews', value: 1342, suffix: '' },
+  { label: 'Jobseekers helped', value: 628 },
+  { label: 'Successful interviews', value: 1342 },
 ]
 
 const chartConfig = {
@@ -111,7 +111,7 @@ export function ImpactTracker() {
   const totalsData = totals.map((total) => ({
     label: total.label,
     value: total.value * progress,
-    display: `${Math.round(total.value * progress).toLocaleString('en-IE')}${total.suffix}`,
+    display: Math.round(total.value * progress).toLocaleString('en-IE'),
   }))
 
   return (
@@ -194,7 +194,7 @@ export function ImpactTracker() {
           <ChartContainer
             config={chartConfig}
             role="img"
-            aria-label="Bar chart of totals to date: more than 600 jobseekers helped and 1,342 successful interviews."
+            aria-label="Bar chart of totals to date: 628 jobseekers helped and 1,342 successful interviews."
             className="aspect-auto h-64 w-full text-sm"
           >
             <BarChart

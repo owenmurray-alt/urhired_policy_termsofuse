@@ -1,4 +1,5 @@
 import { ImpactTracker } from '@/components/impact-tracker'
+import { StoreLinks } from '@/components/store-links'
 
 export function Outcomes() {
   return (
@@ -15,12 +16,13 @@ export function Outcomes() {
             From practice to a job offer.
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
-            More than 600 jobseekers have prepared with Tessa, going on to 1,342 successful
-            interviews. Within 6 weeks, 78% of our users have got a job.
+            628 jobseekers have prepared with Tessa, going on to 1,342 successful interviews.
+            Within 6 weeks, 78% of our users have got a job.
           </p>
         </div>
 
         <ImpactTracker />
+        <StoreLinks />
       </div>
     </section>
   )

@@ -26,10 +26,10 @@ export default function Page() {
             </p>
           </div>
         </div>
+        <Outcomes />
         <Testimonial />
         <Mission />
         <Impact />
-        <Outcomes />
         <PartnerSteps />
         <Demo />
         <ProductTour />

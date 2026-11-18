@@ -1,5 +1,11 @@
 import Image from 'next/image'
 
+import {
+  LINKEDIN_COMPANY_URL,
+  LINKEDIN_FOUNDER_URL,
+  LinkedInLink,
+} from '@/components/linkedin-link'
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-secondary/40">
@@ -27,6 +33,9 @@ export function SiteFooter() {
             AI-powered interview coaching, deployed through the organisations already supporting your
             community.
           </p>
+          <LinkedInLink href={LINKEDIN_COMPANY_URL} className="mt-4">
+            Follow URHired on LinkedIn
+          </LinkedInLink>
         </div>
 
         <div>
@@ -67,6 +76,9 @@ export function SiteFooter() {
             <br />
             +353 83 804 6428
           </address>
+          <LinkedInLink href={LINKEDIN_FOUNDER_URL} className="mt-3">
+            Owen Murray on LinkedIn
+          </LinkedInLink>
         </div>
       </div>
 

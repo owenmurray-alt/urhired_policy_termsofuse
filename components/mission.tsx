@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import { LINKEDIN_FOUNDER_URL, LinkedInLink } from "@/components/linkedin-link"
+
 export function Mission() {
   return (
     <section id="about" className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
@@ -32,6 +34,9 @@ export function Mission() {
             <p className="font-heading text-base font-600 text-foreground">
               — Owen Murray, Founder, URHired
             </p>
+            <LinkedInLink href={LINKEDIN_FOUNDER_URL} className="self-start">
+              Connect with Owen on LinkedIn
+            </LinkedInLink>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@ import {
 
 import { Button } from '@/components/ui/button'
 import { ChartContainer, type ChartConfig } from '@/components/ui/chart'
+import { useLiveStats } from '@/lib/use-live-stats'
 
 const FIGURES_UPDATED = 'November 2026'
 const HIRED_PERCENT = 78
@@ -27,6 +28,12 @@ const totals = [
   { label: 'Jobseekers helped', value: 628 },
   { label: 'Successful interviews', value: 1342 },
 ]
+
+const syncTimeFormat = new Intl.DateTimeFormat('en-IE', {
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+})
 
 const chartConfig = {
   value: { label: 'Result', color: 'var(--primary)' },
@@ -70,6 +77,7 @@ function SweepGradient({ id, isSweeping }: { id: string; isSweeping: boolean }) 
 export function ImpactTracker() {
   const panelRef = useRef<HTMLDivElement>(null)
   const prefersReducedMotion = usePrefersReducedMotion()
+  const live = useLiveStats()
   const [progress, setProgress] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
 
@@ -113,21 +121,34 @@ export function ImpactTracker() {
     value: total.value * progress,
     display: Math.round(total.value * progress).toLocaleString('en-IE'),
   }))
+  const liveFigures = live
+    ? [
+        { label: 'Licences in use right now', value: live.licencesInUse },
+        { label: 'People active in the last 28 days', value: live.activeUsers28d },
+        { label: 'New people in the last 28 days', value: live.newUsers28d },
+      ].filter((figure): figure is { label: string; value: number } => figure.value !== null)
+    : []
 
   return (
     <div ref={panelRef} className="overflow-hidden rounded-3xl border border-border bg-card">
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-b border-border px-6 py-4 md:px-8">
-        <p className="flex items-center gap-3 text-sm font-600 uppercase tracking-widest text-foreground">
-          <span
-            aria-hidden="true"
-            className={`size-2.5 rounded-full bg-accent motion-reduce:animate-none ${
-              isPaused ? '' : 'animate-pulse'
-            }`}
-          />
-          Tessa impact tracker
-        </p>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <p className="text-sm font-600 uppercase tracking-widest text-foreground">
+            Tessa impact tracker
+          </p>
+          {live ? (
+            <p className="flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-sm font-600 uppercase tracking-widest text-accent">
+              <span
+                aria-hidden="true"
+                className={`size-2 rounded-full bg-accent motion-reduce:animate-none ${
+                  isPaused ? '' : 'animate-pulse'
+                }`}
+              />
+              Live
+            </p>
+          ) : null}
+        </div>
         <div className="flex items-center gap-4">
-          <p className="text-sm text-muted-foreground">Updated {FIGURES_UPDATED}</p>
           {prefersReducedMotion ? null : (
             <Button
               variant="outline"
@@ -142,6 +163,36 @@ export function ImpactTracker() {
           )}
         </div>
       </div>
+
+      {live && liveFigures.length > 0 ? (
+        <div className="flex flex-col gap-6 border-b border-border px-6 py-8 md:px-8">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+            <h3 className="font-heading text-lg font-600 text-foreground">Right now</h3>
+            <p className="text-sm text-muted-foreground">
+              Synced at{' '}
+              <time dateTime={live.syncedAt} className="tabular-nums text-foreground">
+                {syncTimeFormat.format(new Date(live.syncedAt))}
+              </time>{' '}
+              · refreshes every minute
+            </p>
+          </div>
+          <dl className="grid gap-6 sm:grid-cols-3">
+            {liveFigures.map((figure) => (
+              <div key={figure.label} className="flex flex-col-reverse justify-end gap-2">
+                <dt className="max-w-48 text-sm leading-snug text-muted-foreground">
+                  {figure.label}
+                </dt>
+                <dd className="font-heading text-5xl font-700 leading-none tracking-tight text-accent tabular-nums">
+                  <span aria-hidden="true">
+                    {Math.round(figure.value * progress).toLocaleString('en-IE')}
+                  </span>
+                  <span className="sr-only">{figure.value.toLocaleString('en-IE')}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      ) : null}
 
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col gap-6 border-b border-border px-6 py-8 md:w-5/12 md:border-b-0 md:border-r md:px-8">
@@ -246,6 +297,12 @@ export function ImpactTracker() {
           </ChartContainer>
         </div>
       </div>
+
+      <p className="border-t border-border px-6 py-4 text-sm leading-relaxed text-muted-foreground md:px-8">
+        {live
+          ? `“Right now” figures come straight from our subscription platform. Job outcomes and totals to date are reviewed by our team, last updated ${FIGURES_UPDATED}.`
+          : `Figures are reviewed by our team, last updated ${FIGURES_UPDATED}.`}
+      </p>
     </div>
   )
 }

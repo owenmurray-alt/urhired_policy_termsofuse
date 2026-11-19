@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { LiveTrackerLink } from '@/components/live-tracker-link'
+
 export function Hero() {
   return (
     <header id="top" className="relative overflow-hidden">
@@ -70,6 +72,9 @@ export function Hero() {
                 className="h-12 w-auto rounded-md object-contain"
               />
             </div>
+          </div>
+          <div className="mt-4">
+            <LiveTrackerLink />
           </div>
         </div>
 
